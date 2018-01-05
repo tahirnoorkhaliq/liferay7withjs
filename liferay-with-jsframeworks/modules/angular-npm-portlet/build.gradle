@@ -1,0 +1,30 @@
+//apply plugin : 'java'
+//apply plugin : 'eclipse'
+
+buildscript {
+	repositories {
+		maven {
+			url "https://cdn.lfrs.sl/repository.liferay.com/nexus/content/groups/public"
+		}
+	}
+	dependencies {
+		classpath group: "com.liferay", name: "com.liferay.gradle.plugins", version: "latest.release"
+		classpath group: "com.liferay", name: "com.liferay.gradle.plugins.js.transpiler", version: "2.4.1"
+		classpath group: "com.liferay", name: "com.liferay.gradle.plugins.node", version: "4.0.0"
+		classpath group: "com.liferay", name: "com.liferay.gradle.plugins.source.formatter", version: "latest.release"
+	}
+}
+
+//apply plugin: "com.liferay.node"
+//apply plugin: "com.liferay.js.transpiler"
+//apply plugin: "com.liferay.plugin"
+//apply plugin: "com.liferay.source.formatter"
+
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel", version: "2.0.0"
+	compileOnly group: "com.liferay.portal", name: "com.liferay.util.taglib", version: "2.0.0"
+	compileOnly group: "javax.portlet", name: "portlet-api", version: "2.0"
+	compileOnly group: "javax.servlet", name: "javax.servlet-api", version: "3.0.1"
+	compileOnly group: "jstl", name: "jstl", version: "1.2"
+	compileOnly group: "org.osgi", name: "osgi.cmpn", version: "6.0.0"
+}
